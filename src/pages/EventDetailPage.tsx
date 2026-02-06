@@ -13,7 +13,20 @@ import { showToast } from "../utils/toast";
 import EventRegistration from "../components/events/EventRegistration";
 import EventDetails from "../components/events/EventDetails";
 import { formatDate as formatDateIST } from "../utils/date";
-import LiquidGlassCard from "../components/liquidglass/LiquidGlassCard";
+const glassCardStyle = {
+  borderRadius: "1.75rem",
+  border: "1px solid rgba(255, 255, 255, 0.18)",
+  background: `
+    linear-gradient(to top, rgba(0, 0, 0, 0.20), transparent 60%),
+    rgba(21, 21, 21, 0.30)
+  `,
+  boxShadow: `
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22)
+  `,
+  backdropFilter: "brightness(1.1) blur(1px)",
+  WebkitBackdropFilter: "brightness(1.1) blur(1px)",
+};
 
 function parseIdFromSlug(slug: string | undefined) {
   if (!slug) {
@@ -79,8 +92,8 @@ function EventDetailPage() {
           <AiOutlineArrowLeft /> Back to events
         </RouterLink>
         <div className="rounded-lg border border-red-900/50 bg-red-900/20 p-6 text-red-200">
-          <h2 className="text-lg font-semibold mb-2">Event Not Found</h2>
-          <p>
+          <h2 className="text-lg mb-2 font-moco font-bold">Event Not Found</h2>
+          <p className="font-moco">
             We couldn't find the event you're looking for. It might have been
             removed or the link is incorrect.
           </p>
@@ -105,11 +118,8 @@ function EventDetailPage() {
     <>
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url(/eventpagebg/bg3.png)",
-        }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0" />
       </div>
       <section className="relative min-h-screen w-full overflow-x-hidden">
         <style>
@@ -179,7 +189,7 @@ function EventDetailPage() {
           </RouterLink>
 
           {/* GLASS CONTAINER: Event Header + Description + Coordinators */}
-          <LiquidGlassCard className="w-full">
+          <div style={glassCardStyle} className="w-full">
             {/* Event Header Section */}
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(280px,340px)_1fr] gap-3 sm:gap-4 lg:gap-6 p-0 sm:p-2 lg:p-4 border-b border-white/10">
               {/* LEFT: Poster Card */}
@@ -207,13 +217,12 @@ function EventDetailPage() {
                 {/* Category & Title */}
                 <div>
                   <div className="inline-block px-4 py-2 rounded-2xl bg-slate-700/40 border border-white/20 mb-3">
-                    <p className="text-sm sm:text-base lg:text-lg uppercase tracking-wider text-yellow-400 font-bold italic">
+                    <p className="text-sm sm:text-base lg:text-lg uppercase tracking-wider text-yellow-400 font-bold italic font-moco">
                       {event.category?.replaceAll("_", " ")}
                     </p>
                   </div>
                   <h1
-                    className="mt-1 sm:mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight"
-                    style={{ fontFamily: "'New Rocker', cursive" }}
+                    className="mt-1 sm:mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight font-moco"
                   >
                     {event.name}
                   </h1>
@@ -269,8 +278,7 @@ function EventDetailPage() {
                 <div className="flex items-center justify-center gap-4">
                   <div className="h-1 w-16 rounded-full bg-linear-to-r from-teal-500 to-cyan-500" />
                   <h2
-                    className="text-2xl sm:text-4xl font-bold text-white text-center leading-tight"
-                    style={{ fontFamily: "'Macondo', cursive" }}
+                    className="text-2xl sm:text-4xl font-bold text-white text-center leading-tight font-moco"
                   >
                     Description
                   </h2>
@@ -293,8 +301,7 @@ function EventDetailPage() {
                 <div className="flex items-center justify-center gap-4">
                   <div className="h-1 w-12 sm:w-16 rounded-full bg-linear-to-r from-pink-500 to-rose-500" />
                   <h2
-                    className="text-lg sm:text-4xl font-bold text-white text-center leading-tight"
-                    style={{ fontFamily: "'Macondo', cursive" }}
+                    className="text-lg sm:text-4xl font-bold text-white text-center leading-tight font-moco"
                   >
                     Event Coordinators
                   </h2>
@@ -303,12 +310,12 @@ function EventDetailPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-8 max-w-2xl mx-auto">
                   <div className="space-y-2 sm:space-y-3 p-3 sm:p-4 rounded-xl border border-white/15 bg-white/8 backdrop-blur-sm hover:border-pink-500/40 hover:shadow-[0_0_20px_rgba(236,72,153,0.15)] transition-all">
-                    <p className="text-base sm:text-lg font-semibold text-white">
+                    <p className="text-base sm:text-lg font-semibold text-white font-moco">
                       Coordinator 1
                     </p>
                     <a
                       href="tel:+91 0000000000"
-                      className="flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-pink-300 transition-colors group"
+                      className="flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-pink-300 transition-colors group font-moco"
                     >
                       <span className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 bg-pink-500/30 rounded group-hover:bg-pink-500/50 transition-colors">
                         <AiOutlinePhone className="text-pink-400 text-xs" />
@@ -318,12 +325,12 @@ function EventDetailPage() {
                   </div>
 
                   <div className="space-y-2 sm:space-y-3 p-3 sm:p-4 rounded-xl border border-white/15 bg-white/8 backdrop-blur-sm hover:border-pink-500/40 hover:shadow-[0_0_20px_rgba(236,72,153,0.15)] transition-all">
-                    <p className="text-base sm:text-lg font-semibold text-white">
+                    <p className="text-base sm:text-lg font-semibold text-white font-moco">
                       Coordinator 2
                     </p>
                     <a
                       href="tel:+91 0000000000"
-                      className="flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-pink-300 transition-colors group"
+                      className="flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-pink-300 transition-colors group font-moco"
                     >
                       <span className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 bg-pink-500/30 rounded group-hover:bg-pink-500/50 transition-colors">
                         <AiOutlinePhone className="text-pink-400 text-xs" />
@@ -334,7 +341,7 @@ function EventDetailPage() {
                 </div>
               </div>
             </div>
-          </LiquidGlassCard>
+          </div>
         </div>
       </section>
     </>
@@ -343,8 +350,8 @@ function EventDetailPage() {
 function InfoPill({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <div className="text-xs sm:text-sm text-white/75">{label}</div>
-      <div className="mt-1 text-sm sm:text-base font-semibold text-white/95">
+      <div className="text-xs sm:text-sm text-white/75 font-moco">{label}</div>
+      <div className="mt-1 text-sm sm:text-base font-semibold text-white/95 font-moco">
         {value}
       </div>
     </div>

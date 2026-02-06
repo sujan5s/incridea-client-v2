@@ -1,7 +1,5 @@
 import { MapPin, Calendar, Users } from "lucide-react";
 import type { PublicEvent } from "../../api/public";
-
-import Glass from "../ui/Glass";
 import { formatDate } from "../../utils/date";
 
 const CATEGORY_THEMES = {
@@ -50,17 +48,18 @@ const EventCard = ({ event, index }: EventCardProps) => {
 
   return (
     <div
-      className={`flex items-center justify-center p-4 font-sans animate-float hover:z-50 ${index % 2 !== 0 ? "lg:mt-24" : "mt-0"
-        }`}
+      className={`flex items-center justify-center p-4 font-sans transition-all duration-500 hover:-translate-y-4 hover:z-50 ${
+        index % 2 !== 0 ? "lg:mt-24" : "mt-0"
+      }`}
       style={{
-        animationName: `floating${(index % 3) + 1}`,
-        animationDuration: `${4 + (index % 3)}s`,
-        animationDelay: `${(index * 2) % 5}s`,
+        animationName: `floating${(index % 3) + 1}, jitter`,
+        animationDuration: `${4 + (index % 3)}s, ${3 + (index % 3)}s`,
+        animationDelay: `${(index * 0.5) % 3}s, ${(index * 0.2) % 2}s`,
         animationTimingFunction: "ease-in-out",
         animationIterationCount: "infinite",
       }}
     >
-      <div className="relative w-[300px] aspect-[1452/2447.19] group">
+      <div className="relative w-[280px] aspect-[1452/2447.19] group">
         <div
           className="absolute inset-0 z-10"
           style={{
@@ -70,60 +69,59 @@ const EventCard = ({ event, index }: EventCardProps) => {
             maskSize: "100% 100%",
           }}
         >
-          {/* Inner Content Area (Glass Effect) */}
-          <Glass
-            className="flex h-full w-full flex-col gap-[8px] p-[20px_16px_10px]"
-          >
-            <div className="mb-[6px] w-full aspect-1080/1350 rounded-[16px] overflow-hidden bg-black/20 border border-white/10">
+          <div className="flex h-full w-full flex-col border border-white/10 p-[16px_14px_8px] backdrop-blur-2xl transition-all duration-500 group-hover:border-white/30 bg-slate-900/40 overflow-hidden">
+            <div
+              className="pointer-events-none absolute inset-0 animate-shine bg-[linear-gradient(120deg,transparent_35%,rgba(255,255,255,0.05)_50%,transparent_65%)] bg-[length:280%_100%]"
+              style={{
+                animationDuration: `${12 + (index % 6)}s`,
+                animationDelay: `${(index * 2) % 8}s`,
+              }}
+            />
+
+            <div className="relative mx-auto w-[94%] aspect-[1080/1350] rounded-xl overflow-hidden bg-black/40 border border-white/10 shrink-0">
               <img
                 src={
                   event.image ||
                   "https://www.shutterstock.com/image-vector/girl-holding-open-book-reading-600nw-1470580109.jpg"
                 }
                 alt={event.name}
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
               />
             </div>
 
-            {/* Event Name - Reduced slightly for better fit */}
-            <div className="ml-1 mt-3 mb-1 text-[12px] font-bold uppercase tracking-[1.5px] text-white/90 truncate cursor-target">
+            <div className="ml-1 mt-3 mb-1 text-[13px] font-bold uppercase tracking-[1.2px] text-white/90 truncate shrink-0">
               {event.name}
             </div>
 
-            {/* Details */}
-            <div className="mt-auto space-y-2 pb-5 pl-1 pr-1">
-              {/* Date */}
-              <div className="flex h-[32px] w-full items-center gap-[8px] rounded-md border border-white/5 bg-white/5 px-4 backdrop-blur-xs text-white/80">
+            <div className="mt-auto space-y-1.5 pb-8 px-1">
+              <div className="flex h-7 w-full items-center gap-2 rounded-md border border-white/5 bg-white/5 px-3 backdrop-blur-sm text-white shrink-0">
                 <Calendar size={12} className="opacity-70 shrink-0" />
-                <span className="text-[10.5px] font-medium tracking-wide truncate">
+                <span className="text-[10px] font-medium tracking-wide truncate">
                   {firstRoundWithDate
                     ? formatDate(firstRoundWithDate.date)
                     : "TBD"}
                 </span>
               </div>
 
-              {/* Team */}
-              <div className="flex h-[32px] w-full items-center gap-[8px] rounded-md border border-white/5 bg-white/5 px-4 backdrop-blur-xs text-white/80">
+              <div className="flex h-7 w-full items-center gap-2 rounded-md border border-white/5 bg-white/5 px-3 backdrop-blur-sm text-white shrink-0">
                 <Users size={12} className="opacity-70 shrink-0" />
-                <span className="text-[10.5px] font-medium tracking-wide truncate">
+                <span className="text-[10px] font-medium tracking-wide truncate">
                   {teamSizeText}
                 </span>
               </div>
 
-              {/* Location */}
-              <div className="flex h-[32px] w-fit min-w-[100px] items-center gap-[8px] rounded-md border border-white/5 bg-white/5 px-4 backdrop-blur-xs text-white/80">
+              <div className="flex h-7 w-fit min-w-[90px] items-center gap-2 rounded-md border border-white/5 bg-white/5 px-3 backdrop-blur-sm text-white shrink-0">
                 <MapPin size={12} className="opacity-70 shrink-0" />
-                <span className="text-[10.5px] font-medium tracking-wide truncate">
+                <span className="text-[10px] font-medium tracking-wide truncate">
                   {event.venue || "NITTE"}
                 </span>
               </div>
             </div>
-          </Glass>
+          </div>
         </div>
 
-        {/* Dynamic Category Tag - 1/4th size reduction + Theme Colors */}
         <div
-          className="absolute bottom-[2.5%] right-[8%] text-[10px] tracking-[0.4em] font-black select-none pointer-events-none z-20 transition-all duration-700 uppercase"
+          className="absolute bottom-[2.5%] right-[8%] text-[9px] tracking-[0.3em] font-black select-none pointer-events-none z-20 transition-all duration-700 uppercase"
           style={{
             color: theme.color,
             textShadow: `0 0 10px ${theme.glow}`,
@@ -133,6 +131,31 @@ const EventCard = ({ event, index }: EventCardProps) => {
           {theme.label}
         </div>
       </div>
+
+      <style>{`
+        @keyframes shine { 
+          0% { background-position: 200% 0; } 
+          100% { background-position: -200% 0; } 
+        }
+        .animate-shine { 
+          animation-name: shine;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        /* High Intensity Chaos / Jitter Effect */
+        @keyframes jitter {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          20% { transform: translate(-4px, 3px) rotate(-1deg); }
+          40% { transform: translate(4px, -2px) rotate(1deg); }
+          60% { transform: translate(-3px, -4px) rotate(-0.5deg); }
+          80% { transform: translate(3px, 4px) rotate(0.5deg); }
+        }
+
+        @keyframes floating1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        @keyframes floating2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        @keyframes floating3 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+      `}</style>
     </div>
   );
 };

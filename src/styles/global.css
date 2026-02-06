@@ -119,6 +119,26 @@
   .toast-close {
     @apply rounded bg-white/5 px-2 py-1 text-[11px] font-semibold text-slate-200 transition hover:bg-white/15;
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.animate-float {
+  will-change: transform;
+}
+
+body.hide-target-cursor {
+  cursor: auto !important;
+}
+
+body.hide-target-cursor .target-cursor-root {
+  display: none !important;
 }
 
 @layer utilities {

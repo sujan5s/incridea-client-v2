@@ -59,7 +59,7 @@ const creditsData = [
         {/* Animated Title - Fade Up */}
         <div className="relative pt-20 mt-4 flex flex-col items-center justify-center w-full">
           <motion.h1
-            className="font-['Michroma'] text-3xl sm:text-5xl sm:top-23 md:top-20 lg:top-13  top-26 text-center md:text-6xl absolute lg:text-8xl font-bold w-full mt-12 bg-gradient-to-b from-white via-white to-transparent bg-clip-text text-transparent tracking-wider"
+            className="font-moco text-3xl sm:text-5xl sm:top-23 md:top-20 lg:top-13  top-26 text-center md:text-6xl absolute lg:text-8xl font-bold w-full mt-12 bg-gradient-to-b from-white via-white to-transparent bg-clip-text text-transparent tracking-wider"
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

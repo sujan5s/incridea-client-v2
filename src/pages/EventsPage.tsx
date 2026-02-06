@@ -120,22 +120,19 @@ function EventsPage() {
     <>
       <div 
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url(/temp_event_bg.png)",
-        }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 " />
       </div>
 
       <section className="space-y-8 max-w-[1400px] mx-auto px-4 md:px-8 py-12">
         <header className="space-y-2">
-          <p className="text-sky-400 uppercase text-[10px] tracking-[0.2em] font-bold">
+          <p className="text-sky-400 uppercase text-[10px] tracking-[0.2em] font-bold font-moco">
             Discover
           </p>
-          <h1 className="text-4xl font-black text-white tracking-tight">
+          <h1 className="text-4xl font-moco font-bold text-white tracking-tight">
             Events
           </h1>
-          <p className="text-slate-400 text-sm max-w-2xl">
+          <p className="text-slate-400 text-sm max-w-2xl font-moco">
             Explore the upcoming challenges. Filter by category or day to find
             your perfect match.
           </p>

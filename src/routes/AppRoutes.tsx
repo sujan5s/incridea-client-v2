@@ -6,17 +6,19 @@ import AboutPage from "../pages/AboutPage";
 import EventsPage from "../pages/EventsPage";
 import EventDetailPage from "../pages/EventDetailPage";
 import RefundPage from "../pages/RefundPage";
+import GuidelinesPage from "../pages/GuidelinesPage.tsx";
 import MerchPage from "../pages/Merch";
-import GuidelinesPage from "../pages/GuidelinesPage";
 import PrivacyPage from "../pages/PrivacyPage";
 import RulesPage from "../pages/RulesPage";
 import QuizPage from "../pages/QuizPage";
 import ProfilePage from "../pages/ProfilePage";
 import RegisterPage from "../pages/RegisterPage";
+import LeaderboardPage from "../pages/LeaderboardPage";
 import AccommodationPage from "../pages/AccommodationPage.tsx";
 import TechTeamPage from "../pages/techteam.tsx";
 import CoreTeamPage from "../pages/coreteam.tsx";
 import NotFoundPage from "../pages/NotFoundPage";
+import Gallery from "../pages/Gallery.tsx";
 import ComingSoon from "../pages/ComingSoon.tsx";
 import RefundPolicy from '../pages/refundpolicy.tsx'
 
@@ -45,7 +47,7 @@ const ResetRedirect = () => {
 function AppRoutes() {
   return (
     <Routes>
-    <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route element={<Layout />}>
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -61,8 +63,10 @@ function AppRoutes() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/accommodation" element={<AccommodationPage />} />
+        <Route path="/leaderboard" element={<LeaderboardPage />} />
         <Route path="/techteam" element={<TechTeamPage />} />
         <Route path="/coreteam" element={<CoreTeamPage />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/merch" element={<MerchPage />} />
         <Route path="*" element={<NotFoundPage />} />

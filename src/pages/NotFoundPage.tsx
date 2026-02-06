@@ -87,7 +87,7 @@ function NotFoundPage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-0 md:gap-12 px-6">
+        <div className="relative z-10 flex flex-col xl:flex-row items-center justify-center gap-8 xl:gap-12 px-6">
           <div className="shrink-0 floating-image flex justify-center items-center w-full md:w-auto">
             <img
               /* I have updated this back to your JPEG name. 
@@ -99,16 +99,16 @@ function NotFoundPage() {
             />
           </div>
 
-          <div className="text-center md:text-left flex flex-col items-center justify-center md:items-start floating-text">
+          <div className="text-center xl:text-left flex flex-col items-center justify-center xl:items-start floating-text">
             <h1
-              className="text-7xl md:text-8xl font-bold mb-2 md:mb-4 jersey-10-regular glitch"
+              className="text-7xl md:text-8xl font-bold mb-4 xl:mb-4 jersey-10-regular glitch"
               data-text="404 Not Found"
               style={{ color: "#ffffff", letterSpacing: "0.05em" }}
             >
               404 Not Found
             </h1>
             <p
-              className="text-lg md:text-3xl mb-4 md:mb-8 leading-relaxed max-w-md jersey-10-regular"
+              className="text-lg md:text-3xl mb-4 xl:mb-8 leading-relaxed max-w-md jersey-10-regular"
               style={{ color: "#ffffff" }}
             >
               Access denied: Ryouko sealed the rift,
@@ -117,7 +117,7 @@ function NotFoundPage() {
             </p>
             <Link
               to="/"
-              className="px-16 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-4xl transition jersey-10-regular text-xl"
+              className="cursor-target px-16 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-4xl transition jersey-10-regular text-xl"
             >
               Go Home
             </Link>

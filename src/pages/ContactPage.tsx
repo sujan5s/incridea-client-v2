@@ -1,18 +1,16 @@
 import { MdCall, MdLocationOn, MdMail } from 'react-icons/md'
 import { FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa'
-
-
 const glassCardStyle = {
   borderRadius: "1.75rem",
   border: "1px solid rgba(255, 255, 255, 0.18)",
   background: `
-      linear-gradient(to top, rgba(0, 0, 0, 0.20), transparent 60%),
-      rgba(21, 21, 21, 0.30)
-    `,
+    linear-gradient(to top, rgba(0, 0, 0, 0.20), transparent 60%),
+    rgba(21, 21, 21, 0.30)
+  `,
   boxShadow: `
-      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.22)
-    `,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22)
+  `,
   backdropFilter: "brightness(1.1) blur(1px)",
   WebkitBackdropFilter: "brightness(1.1) blur(1px)",
 };
@@ -20,23 +18,20 @@ const glassCardStyle = {
 function ContactPage() {
   return (
     <>
-
-
-      <div className="min-h-screen text-white relative overflow-x-hidden">
+      <div className="min-h-screen text-white max-w-6xl relative">
         {/* Full Screen Background Image */}
         <div
           className="fixed inset-0 w-full h-full -z-10"
           style={{
-            backgroundImage: 'url(/temp_event_bg.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
           }}
         />
 
         {/* Dark Overlay to make text readable */}
-        <div className="fixed inset-0 bg-black/40 -z-10" />
+        <div className="fixed inset-0 -z-10" />
 
         {/* Gradient Orbs - Reduced opacity */}
         <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -50,36 +45,41 @@ function ContactPage() {
           <div className="mx-auto flex max-w-7xl flex-col gap-8">
             {/* Header */}
             <header className="space-y-3 text-center">
-              <h1 className="text-5xl font-bold text-white md:text-7xl tracking-tight drop-shadow-lg">
+              {/* FIXED: Scaled down text sizes for Monitor vs Mobile */}
+              <h1 className="text-3xl sm:text-5xl font-bold text-white md:text-4xl tracking-tight drop-shadow-lg">
                 Contact Us
               </h1>
-              <p className="mx-auto max-w-3xl text-base text-slate-100 md:text-xl drop-shadow-md">
+              <p className="mx-auto max-w-3xl text-sm sm:text-base md:text-lg text-slate-100 drop-shadow-md">
                 Any question or remarks? Just write us a message!
               </p>
             </header>
 
             {/* Main Contact Card */}
-            <div style={glassCardStyle} className="p-8 block w-full relative">
+            <div style={glassCardStyle}>
               <div className="grid gap-6 md:grid-cols-5">
                 {/* Left Side - Contact Information */}
                 <div className="md:col-span-2 space-y-8 p-4 md:p-6 relative">
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+                    {/* FIXED: Heading size hierarchy */}
+                    <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2">
                       Contact Information
                     </h2>
-                    <p className="text-slate-300 text-sm md:text-base">
-                      Any queries should be directed to the student organisers and college staff.
+                    <p className="text-slate-300 text-xs sm:text-sm lg:text-base">
+                      Any queries should be directed to the student organisers
+                      and college staff.
                     </p>
                   </div>
 
                   {/* Email */}
                   <div className="flex items-start gap-3">
-                    <MdMail className="text-2xl text-white mt-1 shrink-0" />
+                    <MdMail className="text-xl text-white mt-1 shrink-0" />
                     <div>
-                      <p className="text-slate-300 text-sm mb-1">Email</p>
+                      <p className="text-slate-300 text-[10px] sm:text-xs mb-1 uppercase font-bold tracking-wider">
+                        Email
+                      </p>
                       <a
                         href="mailto:incridea@nmamit.in"
-                        className="text-white hover:text-sky-300 transition-colors break-all"
+                        className="text-white text-xs sm:text-sm lg:text-base hover:text-sky-300 transition-colors break-all"
                       >
                         incridea@nmamit.in
                       </a>
@@ -88,21 +88,45 @@ function ContactPage() {
 
                   {/* Phone Numbers */}
                   <div className="flex items-start gap-3">
-                    <MdCall className="text-2xl text-white mt-1 shrink-0" />
+                    <MdCall className="text-xl text-white mt-1 shrink-0" />
                     <div className="space-y-2">
-                      <p className="text-slate-300 text-sm mb-1">Phone Numbers</p>
-                      <div className="space-y-1 text-sm">
+                      <p className="text-slate-300 text-[10px] sm:text-xs mb-1 uppercase font-bold tracking-wider">
+                        Phone Numbers
+                      </p>
+                      <div className="space-y-1 text-xs sm:text-sm lg:text-base">
                         <p className="text-white">
-                          General: <a className="hover:text-sky-300 transition-colors" href="tel:9449530107">+91 94495 30107</a>
+                          General:{" "}
+                          <a
+                            className="hover:text-sky-300 transition-colors font-semibold"
+                            href="tel:9449530107"
+                          >
+                            +91 94495 30107
+                          </a>
                         </p>
                         <p className="text-white">
-                          <a className="hover:text-sky-300 transition-colors" href="tel:9513295282">+91 95132 95282</a>
+                          <a
+                            className="hover:text-sky-300 transition-colors font-semibold"
+                            href="tel:9513295282"
+                          >
+                            +91 95132 95282
+                          </a>
                         </p>
                         <p className="text-white mt-2">
-                          Technical: <a className="hover:text-sky-300 transition-colors" href="tel:9448846524">+91 94488 46524</a>
+                          Technical:{" "}
+                          <a
+                            className="hover:text-sky-300 transition-colors font-semibold"
+                            href="tel:9448846524"
+                          >
+                            +91 94488 46524
+                          </a>
                         </p>
                         <p className="text-white">
-                          <a className="hover:text-sky-300 transition-colors" href="tel:9686356123">+91 96863 56123</a>
+                          <a
+                            className="hover:text-sky-300 transition-colors font-semibold"
+                            href="tel:9686356123"
+                          >
+                            +91 96863 56123
+                          </a>
                         </p>
                       </div>
                     </div>
@@ -110,10 +134,12 @@ function ContactPage() {
 
                   {/* Address */}
                   <div className="flex items-start gap-3">
-                    <MdLocationOn className="text-2xl text-white mt-1 shrink-0" />
+                    <MdLocationOn className="text-xl text-white mt-1 shrink-0" />
                     <div>
-                      <p className="text-slate-300 text-sm mb-1">Address</p>
-                      <div className="text-white text-sm space-y-1">
+                      <p className="text-slate-300 text-[10px] sm:text-xs mb-1 uppercase font-bold tracking-wider">
+                        Address
+                      </p>
+                      <div className="text-white text-xs sm:text-sm lg:text-base space-y-1">
                         <p>NMAM Institute of Technology,</p>
                         <p>Nitte, Karkala Taluk, Udupi,</p>
                         <p>Karnataka, India - 574110</p>
@@ -123,36 +149,33 @@ function ContactPage() {
 
                   {/* Social Media - Glassy Icons */}
                   <div className="flex gap-4 pt-4">
-                    {/* YouTube Glass Icon */}
                     <a
                       href="https://youtube.com/@incrideanmamit"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-red-500/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/25 overflow-hidden group relative"
+                      className="w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-red-500/30 transition-all duration-300 hover:scale-110 overflow-hidden group relative"
                     >
-                      <FaYoutube className="text-white text-xl relative z-10 drop-shadow-lg" />
+                      <FaYoutube className="text-white text-lg relative z-10" />
                       <div className="absolute inset-0 bg-linear-to-br from-red-500/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </a>
 
-                    {/* Instagram Glass Icon */}
                     <a
                       href="https://instagram.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-linear-to-br from-white/10 to-white/5 hover:from-pink-400/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/25 overflow-hidden group relative"
+                      className="w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-linear-to-br from-white/10 to-white/5 hover:from-pink-400/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-110 overflow-hidden group relative"
                     >
-                      <FaInstagram className="text-white text-xl relative z-10 drop-shadow-lg" />
+                      <FaInstagram className="text-white text-lg relative z-10" />
                       <div className="absolute inset-0 bg-linear-to-br from-pink-400/20 via-purple-500/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </a>
 
-                    {/* LinkedIn Glass Icon */}
                     <a
                       href="https://linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-blue-400/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 overflow-hidden group relative"
+                      className="w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-blue-400/30 transition-all duration-300 hover:scale-110 overflow-hidden group relative"
                     >
-                      <FaLinkedin className="text-white text-xl relative z-10 drop-shadow-lg" />
+                      <FaLinkedin className="text-white text-lg relative z-10" />
                       <div className="absolute inset-0 bg-linear-to-br from-blue-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </a>
                   </div>
@@ -162,8 +185,10 @@ function ContactPage() {
                 <div className="md:col-span-3 space-y-6 p-4 md:p-6">
                   {/* University Info */}
                   <div className="rounded-2xl border border-slate-700/50 bg-slate-900/30 p-4 md:p-6 backdrop-blur-sm">
-                    <h3 className="text-lg font-semibold mb-3 text-white">University Information</h3>
-                    <div className="text-slate-200 text-sm space-y-1">
+                    <h3 className="text-sm sm:text-base font-semibold mb-3 text-white uppercase tracking-wider">
+                      University Information
+                    </h3>
+                    <div className="text-slate-300 text-xs sm:text-sm space-y-1">
                       <p>A unit of Nitte (Deemed to be University)</p>
                       <p>Nitte Education Trust</p>
                       <p>6th Floor, University Enclave,</p>
@@ -199,14 +224,25 @@ function ContactPage() {
         <svg className="absolute w-0 h-0">
           <defs>
             <filter id="displacementFilter">
-              <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turbulence" />
-              <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="2" xChannelSelector="R" yChannelSelector="G" />
+              <feTurbulence
+                type="turbulence"
+                baseFrequency="0.01"
+                numOctaves="2"
+                result="turbulence"
+              />
+              <feDisplacementMap
+                in2="turbulence"
+                in="SourceGraphic"
+                scale="2"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
             </filter>
           </defs>
         </svg>
       </div>
     </>
-  )
+  );
 }
 
-export default ContactPage
+export default ContactPage;

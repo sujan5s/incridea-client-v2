@@ -30,10 +30,10 @@ function TechCard({ image, name, quote, socials }: TechCardProps) {
             to-[rgb(66,40,118)]
           "
             >
-                <h2 className="text-2xl font-bold mb-2">{name}</h2>
+                <h2 className="text-2xl font-bold mb-2 font-moco">{name}</h2>
 
                 {quote && (
-                    <p className="text-[15px] leading-snug text-gray-200 mb-6">
+                    <p className="text-[15px] leading-snug text-gray-200 mb-6 font-moco">
                         {quote}
                     </p>
                 )}

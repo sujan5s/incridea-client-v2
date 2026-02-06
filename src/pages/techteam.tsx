@@ -122,9 +122,8 @@ export default function TechTeamPage() {
       </style>
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/temp_event_bg.png')" }}
         >
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 " />
       </div>
 
       {/* Content */}
@@ -134,7 +133,7 @@ export default function TechTeamPage() {
         <div className="relative pt-20 flex flex-col items-center justify-center w-full">
         {/* Animated Title - Fade Up */}
           <motion.h1
-            className="font-['Michroma'] text-3xl sm:text-5xl sm:top-13 md:top-11 lg:top-4  top-17 text-center md:text-6xl absolute lg:text-8xl font-bold w-full mt-12 bg-gradient-to-b from-white via-white to-transparent bg-clip-text text-transparent tracking-wider"
+            className="font-moco text-3xl sm:text-5xl sm:top-13 md:top-11 lg:top-4  top-17 text-center md:text-6xl absolute lg:text-8xl font-bold w-full mt-12 bg-gradient-to-b from-white via-white to-transparent bg-clip-text text-transparent tracking-wider"
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{

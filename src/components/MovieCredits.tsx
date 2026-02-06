@@ -17,7 +17,7 @@ const MovieCredits: React.FC<MovieCreditsProps> = ({ sections }) => {
                 {sections.map((section, sectionIndex) => (
                     <div key={sectionIndex}>
                         {/* Section Title */}
-                        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-4 sm:mb-5 tracking-wider sm:tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-4 sm:mb-5 tracking-wider sm:tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-moco">
                             {section.title}
                         </h2>
 
@@ -26,7 +26,7 @@ const MovieCredits: React.FC<MovieCreditsProps> = ({ sections }) => {
                             {section.members.map((name, nameIndex) => (
                                 <motion.div
                                     key={nameIndex}
-                                    className="text-center text-white text-sm sm:text-base md:text-lg font-semibold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+                                    className="text-center text-white text-sm sm:text-base md:text-lg font-semibold tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] font-moco"
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}

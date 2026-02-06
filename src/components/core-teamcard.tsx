@@ -45,12 +45,12 @@ const CoreTeamCard: React.FC<CoreTeamCardProps> = ({
                 {/* 3. Name Pill (Bottom) - Using LiquidGlassCard only for Title */}
                 <div className="w-full shrink-0 flex flex-col items-center gap-3">
                     <LiquidGlassCard className="w-full !rounded-full !p-4 flex flex-col items-center justify-center shadow-lg group-hover:bg-white/5 transition-colors">
-                        <h3 className="text-white font-bold tracking-wide text-lg leading-tight text-center">{title}</h3>
+                        <h3 className="text-white font-bold tracking-wide text-lg leading-tight text-center font-moco">{title}</h3>
                     </LiquidGlassCard>
 
                     {/* Designation / Subtitle - Glass Text Effect */}
                     <p
-                        className="text-white/80 text-[10px] font-semibold uppercase tracking-widest text-center"
+                        className="text-white/80 text-[10px] font-semibold uppercase tracking-widest text-center font-moco"
 
                     >
                         {subtitle}
