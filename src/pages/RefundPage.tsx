@@ -2,7 +2,7 @@ function RefundPage() {
   return (
     <div className="min-h-screen px-3 sm:px-4 pb-28 md:pb-16 pt-8 sm:pt-10 text-slate-100 md:px-6">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 rounded-2xl bg-slate-950/50 border border-slate-800 p-6 md:p-10 shadow-xl">
-        <h1 className="mb-3 text-center text-4xl tracking-wider md:text-6xl font-life-craft text-sky-200">Refund Policy</h1>
+        <h1 className="mb-6 text-center text-4xl tracking-wider md:text-6xl font-life-craft text-sky-200">Refund Policy</h1>
         <div className="space-y-6 text-slate-300">
           <div>
             <h2 className="mt-4 text-2xl font-semibold text-sky-100">Introduction</h2>

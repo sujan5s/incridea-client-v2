@@ -34,12 +34,11 @@ const RulesPage = () => {
           <div className="mx-auto flex max-w-7xl flex-col gap-8">
             <div style={glassCardStyle} className="p-6 md:p-10">
               <div className="mb-8">
-                <h1 className="text-xl sm:text-2xl lg:text-3xl tracking-wider font-life-craft text-white drop-shadow-[0_0_15px_rgba(216,180,254,0.3)] font-bold">
+                <h1 className="text-xl sm:text-2xl lg:text-3xl font-normal text-fuchsia-100 drop-shadow-[0_0_15px_rgba(232,121,249,0.3)] text-center leading-tight">
                   Terms and Conditions
                 </h1>
-                <p className="mt-1 text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-purple-300/60">
-                  Guidelines & Regulations
-                </p>
+                
+                
               </div>
 
               <div className="mb-10 h-px w-full bg-gradient-to-r from-transparent via-purple-200/20 to-transparent" />
@@ -47,7 +46,7 @@ const RulesPage = () => {
               {/* Main content container with standardized typography */}
               <div className="flex flex-col gap-8 text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Overview
                   </h2>
                   <p>
@@ -95,7 +94,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 1 - Incridea 2026 Participation Terms
                   </h2>
                   <p>
@@ -127,7 +126,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 2 - General Conditions for Incridea 2026 Participation
                   </h2>
                   <p>
@@ -157,7 +156,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 3 - Accuracy, Completeness and Timeliness of Information
                   </h2>
                   <p>
@@ -186,7 +185,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 4 - Modifications to Incridea 2026 and Registration Prices
                   </h2>
                   <p>
@@ -207,7 +206,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 5 - Events and Services at Incridea 2026
                   </h2>
                   <p>
@@ -243,7 +242,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 6 - Accuracy of Registration and Account Information
                   </h2>
                   <p>
@@ -271,7 +270,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 7 - Optional Tools
                   </h2>
                   <p>
@@ -303,7 +302,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 8 - Third-party Links
                   </h2>
                   <p>
@@ -332,7 +331,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 9 - User Comments, Feedback, and Other Submissions
                   </h2>
                   <p>
@@ -376,7 +375,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 10 - Personal Information
                   </h2>
                   <p>
@@ -388,7 +387,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 11 - Errors, Inaccuracies and Omissions
                   </h2>
                   <p>
@@ -411,7 +410,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 12 - Prohibited Uses
                   </h2>
                   <p>
@@ -445,7 +444,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 13 - Disclaimer of Warranties; Limitation of Liability
                   </h2>
                   <p>
@@ -499,7 +498,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 14 - Indemnification
                   </h2>
                   <p>
@@ -516,7 +515,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 15 - Severability
                   </h2>
                   <p>
@@ -531,7 +530,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 16 - Termination
                   </h2>
                   <p>
@@ -552,7 +551,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 17 - Entire Agreement
                   </h2>
                   <p>
@@ -576,7 +575,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                 <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 18 - Governing Law
                   </h2>
                   <p>
@@ -588,7 +587,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 19 - Changes to Terms of Service
                   </h2>
                   <p>
@@ -607,7 +606,7 @@ const RulesPage = () => {
                 </section>
 
                 <section className="flex flex-col gap-3 border-t border-purple-200/20 pt-10">
-                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-300">
+                  <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
                     Section 20 - Contact Information
                   </h2>
                   <p>

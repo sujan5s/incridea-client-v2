@@ -42,9 +42,7 @@ function RefundPolicy() {
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-normal text-fuchsia-100 drop-shadow-[0_0_15px_rgba(232,121,249,0.3)] text-center leading-tight">
                 Refund Policy
               </h1>
-              <p className="text-center text-fuchsia-300/60 text-[10px] md:text-xs font-bold uppercase tracking-[0.3em]">
-                Guidelines & Regulations
-              </p>
+              
             </header>
 
             <div className="mb-10 h-px w-full bg-gradient-to-r from-transparent via-fuchsia-200/20 to-transparent" />

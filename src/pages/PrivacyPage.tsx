@@ -18,20 +18,24 @@ const PrivacyPage = () => {
     <div className="min-h-screen px-3 sm:px-4 pb-28 md:pb-16 pt-8 sm:pt-10  md:px-6 max-w-6xl">
       {/* Updated className to max-w-6xl mx-auto to match GuidelinesPage width */}
       <div style={glassCardStyle} className="mx-auto flex w-full max-w-6xl flex-col gap-8 p-6 md:p-10">
-        <div className="flex flex-initial flex-col gap-4 pb-10  border-b border-slate-800/50">
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-life-craft tracking-wider text-purple-200">
+        <header className="space-y-2 sm:space-y-4">
+         <h1 className="text-xl sm:text-2xl lg:text-3xl font-normal text-fuchsia-100 drop-shadow-[0_0_15px_rgba(232,121,249,0.3)] text-center leading-tight">
             Incridea 2026 Privacy Policy
           </h1>
-          <p className="text-xs sm:text-sm lg:text-base text-purple-400">
+          <p className="mt-1 text-center text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-purple-300/60">
             At Incridea, we take your privacy seriously and are committed to
             protecting your personal information. This privacy policy explains
             how we collect, use, and safeguard your data. By registering for our
             festival competition, you agree to the terms of this privacy policy.
           </p>
-        </div>
+        </header>
+
+        <div className="mb-6 h-px w-full bg-gradient-to-r from-transparent via-fuchsia-200/20 to-transparent" />
+
+        <div className="text-slate-200 space-y-6 sm:space-y-8">
 
         <section className="flex  mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Consent
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -44,8 +48,8 @@ const PrivacyPage = () => {
           </p>
         </section>
 
-        <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+        <section className="flex flex-col gap-3">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Information Collection
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -59,7 +63,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Use of Information
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -82,7 +86,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Sharing of Information
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -99,7 +103,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+         <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Third-party services
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -125,7 +129,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Your Control Over Information
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -137,7 +141,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Cookies
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -149,7 +153,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Security Measures
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -163,7 +167,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Registrations
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -175,7 +179,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Eligibility Policy
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -188,7 +192,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Payment Processing and Security
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -224,7 +228,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Links to Other Sites
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -236,7 +240,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3">
-          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-purple-400 ">
+          <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-fuchsia-300">
             Changes to privacy policy
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed">
@@ -260,7 +264,7 @@ const PrivacyPage = () => {
         </section>
 
         <section className="flex mt-12 flex-col gap-3 border-t border-slate-800/50 pt-10">
-          <p className="text-sm sm:text-base lg:text-lg font-semibold text-purple-400 ">
+          <p className="text-sm sm:text-base lg:text-lg font-semibold text-fuchsia-300 ">
             For inquiries or clarifications on our privacy policy or personal
             data handling, you may reach us at{" "}
             <a
@@ -279,6 +283,7 @@ const PrivacyPage = () => {
             .
           </p>
         </section>
+        </div>
       </div>
     </div>
   );

@@ -67,19 +67,20 @@ function GuidelinesPage() {
           {/* Removed internal 'overflow-y-auto' so it uses the page scroll */}
           <div className="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8">
             <header className="space-y-2 sm:space-y-4">
-              <h1 className="text-center text-xl sm:text-2xl lg:text-3xl font-normal text-sky-200 leading-tight px-2">
+              <h1 className="text-center text-xl sm:text-2xl lg:text-3xl font-normal text-fuchsia-100 drop-shadow-[0_0_15px_rgba(232,121,249,0.3)] leading-tight px-2">
                 Guidelines and Regulations for Participating in Incridea 2026
               </h1>
 
-              <p className="text-center text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed max-w-4xl mx-auto px-2">
+              <p className="mt-1 text-center text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-purple-300/60">
                 The fest is open to all students from engineering as well as
                 Nitte sister institutions.
               </p>
             </header>
+            <div className="mb-10 h-px w-full bg-gradient-to-r from-transparent via-fuchsia-200/20 to-transparent" />
 
             <div className="text-slate-200 space-y-6 sm:space-y-8">
               <section>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-sky-100 mb-3">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-fuchsia-300 mb-3">
                   Participant Registration, Entry, Identification and Access
                 </h2>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-slate-300 leading-relaxed text-xs sm:text-sm lg:text-base">
@@ -102,7 +103,7 @@ function GuidelinesPage() {
               </section>
 
               <section>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-sky-100 mb-3">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-fuchsia-300 mb-3">
                   Event Rules
                 </h2>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-slate-300 leading-relaxed text-xs sm:text-sm lg:text-base">
@@ -113,7 +114,7 @@ function GuidelinesPage() {
               </section>
 
               <section>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-sky-100 mb-3">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-fuchsia-300 mb-3">
                   Championship Points
                 </h2>
 
@@ -198,7 +199,7 @@ function GuidelinesPage() {
               </section>
 
               <section>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-sky-100 mb-3">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-fuchsia-300 mb-3">
                   Prohibited Conduct
                 </h2>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-slate-300 leading-relaxed text-xs sm:text-sm lg:text-base">
@@ -208,7 +209,7 @@ function GuidelinesPage() {
               </section>
 
               <section>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-sky-100 mb-3">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-fuchsia-300 mb-3">
                   Accommodation
                 </h2>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-slate-300 leading-relaxed text-xs sm:text-sm lg:text-base">
@@ -222,7 +223,7 @@ function GuidelinesPage() {
               </section>
 
               <section>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-sky-100 mb-3">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-fuchsia-300 mb-3">
                   Campus Rules
                 </h2>
                 <ul className="list-disc pl-4 sm:pl-6 space-y-2 text-slate-300 leading-relaxed text-xs sm:text-sm lg:text-base">
