@@ -1,6 +1,21 @@
 import { MdCall, MdLocationOn, MdMail } from 'react-icons/md'
 import { FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import LiquidGlassCard from '../components/liquidglass/LiquidGlassCard'
+
+
+const glassCardStyle = {
+  borderRadius: "1.75rem",
+  border: "1px solid rgba(255, 255, 255, 0.18)",
+  background: `
+      linear-gradient(to top, rgba(0, 0, 0, 0.20), transparent 60%),
+      rgba(21, 21, 21, 0.30)
+    `,
+  boxShadow: `
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.22)
+    `,
+  backdropFilter: "brightness(1.1) blur(1px)",
+  WebkitBackdropFilter: "brightness(1.1) blur(1px)",
+};
 
 function ContactPage() {
   return (
@@ -9,7 +24,7 @@ function ContactPage() {
 
       <div className="min-h-screen text-white relative overflow-x-hidden">
         {/* Full Screen Background Image */}
-        <div 
+        <div
           className="fixed inset-0 w-full h-full -z-10"
           style={{
             backgroundImage: 'url(/temp_event_bg.png)',
@@ -19,7 +34,7 @@ function ContactPage() {
             backgroundAttachment: 'fixed'
           }}
         />
-        
+
         {/* Dark Overlay to make text readable */}
         <div className="fixed inset-0 bg-black/40 -z-10" />
 
@@ -44,139 +59,139 @@ function ContactPage() {
             </header>
 
             {/* Main Contact Card */}
-            <LiquidGlassCard>
-                <div className="grid gap-6 md:grid-cols-5">
-                  {/* Left Side - Contact Information */}
-                  <div className="md:col-span-2 space-y-8 p-4 md:p-6 relative">
+            <div style={glassCardStyle} className="p-8 block w-full relative">
+              <div className="grid gap-6 md:grid-cols-5">
+                {/* Left Side - Contact Information */}
+                <div className="md:col-span-2 space-y-8 p-4 md:p-6 relative">
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+                      Contact Information
+                    </h2>
+                    <p className="text-slate-300 text-sm md:text-base">
+                      Any queries should be directed to the student organisers and college staff.
+                    </p>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-start gap-3">
+                    <MdMail className="text-2xl text-white mt-1 shrink-0" />
                     <div>
-                      <h2 className="text-2xl md:text-3xl font-semibold mb-2">
-                        Contact Information
-                      </h2>
-                      <p className="text-slate-300 text-sm md:text-base">
-                        Any queries should be directed to the student organisers and college staff.
-                      </p>
-                    </div>
-
-                    {/* Email */}
-                    <div className="flex items-start gap-3">
-                      <MdMail className="text-2xl text-white mt-1 shrink-0" />
-                      <div>
-                        <p className="text-slate-300 text-sm mb-1">Email</p>
-                        <a
-                          href="mailto:incridea@nmamit.in"
-                          className="text-white hover:text-sky-300 transition-colors break-all"
-                        >
-                          incridea@nmamit.in
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Phone Numbers */}
-                    <div className="flex items-start gap-3">
-                      <MdCall className="text-2xl text-white mt-1 shrink-0" />
-                      <div className="space-y-2">
-                        <p className="text-slate-300 text-sm mb-1">Phone Numbers</p>
-                        <div className="space-y-1 text-sm">
-                          <p className="text-white">
-                            General: <a className="hover:text-sky-300 transition-colors" href="tel:9449530107">+91 94495 30107</a>
-                          </p>
-                          <p className="text-white">
-                            <a className="hover:text-sky-300 transition-colors" href="tel:9513295282">+91 95132 95282</a>
-                          </p>
-                          <p className="text-white mt-2">
-                            Technical: <a className="hover:text-sky-300 transition-colors" href="tel:9448846524">+91 94488 46524</a>
-                          </p>
-                          <p className="text-white">
-                            <a className="hover:text-sky-300 transition-colors" href="tel:9686356123">+91 96863 56123</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Address */}
-                    <div className="flex items-start gap-3">
-                      <MdLocationOn className="text-2xl text-white mt-1 shrink-0" />
-                      <div>
-                        <p className="text-slate-300 text-sm mb-1">Address</p>
-                        <div className="text-white text-sm space-y-1">
-                          <p>NMAM Institute of Technology,</p>
-                          <p>Nitte, Karkala Taluk, Udupi,</p>
-                          <p>Karnataka, India - 574110</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Social Media - Glassy Icons */}
-                    <div className="flex gap-4 pt-4">
-                      {/* YouTube Glass Icon */}
-                      <a 
-                        href="https://youtube.com/@incrideanmamit" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-red-500/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/25 overflow-hidden group relative"
+                      <p className="text-slate-300 text-sm mb-1">Email</p>
+                      <a
+                        href="mailto:incridea@nmamit.in"
+                        className="text-white hover:text-sky-300 transition-colors break-all"
                       >
-                        <FaYoutube className="text-white text-xl relative z-10 drop-shadow-lg" />
-                        <div className="absolute inset-0 bg-linear-to-br from-red-500/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </a>
-
-                      {/* Instagram Glass Icon */}
-                      <a 
-                        href="https://instagram.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-linear-to-br from-white/10 to-white/5 hover:from-pink-400/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/25 overflow-hidden group relative"
-                      >
-                        <FaInstagram className="text-white text-xl relative z-10 drop-shadow-lg" />
-                        <div className="absolute inset-0 bg-linear-to-br from-pink-400/20 via-purple-500/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </a>
-
-                      {/* LinkedIn Glass Icon */}
-                      <a 
-                        href="https://linkedin.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-blue-400/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 overflow-hidden group relative"
-                      >
-                        <FaLinkedin className="text-white text-xl relative z-10 drop-shadow-lg" />
-                        <div className="absolute inset-0 bg-linear-to-br from-blue-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        incridea@nmamit.in
                       </a>
                     </div>
                   </div>
 
-                  {/* Right Side - Additional Info & Map */}
-                  <div className="md:col-span-3 space-y-6 p-4 md:p-6">
-                    {/* University Info */}
-                    <div className="rounded-2xl border border-slate-700/50 bg-slate-900/30 p-4 md:p-6 backdrop-blur-sm">
-                      <h3 className="text-lg font-semibold mb-3 text-white">University Information</h3>
-                      <div className="text-slate-200 text-sm space-y-1">
-                        <p>A unit of Nitte (Deemed to be University)</p>
-                        <p>Nitte Education Trust</p>
-                        <p>6th Floor, University Enclave,</p>
-                        <p>Medical Sciences Complex,</p>
-                        <p>Deralakatte, Mangaluru - 575018</p>
-                        <p>Karnataka, India</p>
+                  {/* Phone Numbers */}
+                  <div className="flex items-start gap-3">
+                    <MdCall className="text-2xl text-white mt-1 shrink-0" />
+                    <div className="space-y-2">
+                      <p className="text-slate-300 text-sm mb-1">Phone Numbers</p>
+                      <div className="space-y-1 text-sm">
+                        <p className="text-white">
+                          General: <a className="hover:text-sky-300 transition-colors" href="tel:9449530107">+91 94495 30107</a>
+                        </p>
+                        <p className="text-white">
+                          <a className="hover:text-sky-300 transition-colors" href="tel:9513295282">+91 95132 95282</a>
+                        </p>
+                        <p className="text-white mt-2">
+                          Technical: <a className="hover:text-sky-300 transition-colors" href="tel:9448846524">+91 94488 46524</a>
+                        </p>
+                        <p className="text-white">
+                          <a className="hover:text-sky-300 transition-colors" href="tel:9686356123">+91 96863 56123</a>
+                        </p>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Map */}
-                    <div className="rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl">
-                      <div className="aspect-video w-full">
-                        <iframe
-                          title="NMAMIT Location"
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.6730538655893!2d74.92911808195412!3d13.183002554024787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb56415ad85e5b%3A0x10b77ac6f6afc7fa!2sNitte%20Mahalinga%20Adyantaya%20Memorial%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1738765768735!5m2!1sen!2sin"
-                          width="100%"
-                          height="100%"
-                          style={{ border: 0 }}
-                          allowFullScreen
-                          loading="lazy"
-                          referrerPolicy="no-referrer-when-downgrade"
-                          className="grayscale-[0.3] contrast-[1.1]"
-                        />
+                  {/* Address */}
+                  <div className="flex items-start gap-3">
+                    <MdLocationOn className="text-2xl text-white mt-1 shrink-0" />
+                    <div>
+                      <p className="text-slate-300 text-sm mb-1">Address</p>
+                      <div className="text-white text-sm space-y-1">
+                        <p>NMAM Institute of Technology,</p>
+                        <p>Nitte, Karkala Taluk, Udupi,</p>
+                        <p>Karnataka, India - 574110</p>
                       </div>
+                    </div>
+                  </div>
+
+                  {/* Social Media - Glassy Icons */}
+                  <div className="flex gap-4 pt-4">
+                    {/* YouTube Glass Icon */}
+                    <a
+                      href="https://youtube.com/@incrideanmamit"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-red-500/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/25 overflow-hidden group relative"
+                    >
+                      <FaYoutube className="text-white text-xl relative z-10 drop-shadow-lg" />
+                      <div className="absolute inset-0 bg-linear-to-br from-red-500/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </a>
+
+                    {/* Instagram Glass Icon */}
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-linear-to-br from-white/10 to-white/5 hover:from-pink-400/30 hover:to-purple-500/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/25 overflow-hidden group relative"
+                    >
+                      <FaInstagram className="text-white text-xl relative z-10 drop-shadow-lg" />
+                      <div className="absolute inset-0 bg-linear-to-br from-pink-400/20 via-purple-500/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </a>
+
+                    {/* LinkedIn Glass Icon */}
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 bg-white/10 hover:bg-blue-400/30 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/25 overflow-hidden group relative"
+                    >
+                      <FaLinkedin className="text-white text-xl relative z-10 drop-shadow-lg" />
+                      <div className="absolute inset-0 bg-linear-to-br from-blue-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Side - Additional Info & Map */}
+                <div className="md:col-span-3 space-y-6 p-4 md:p-6">
+                  {/* University Info */}
+                  <div className="rounded-2xl border border-slate-700/50 bg-slate-900/30 p-4 md:p-6 backdrop-blur-sm">
+                    <h3 className="text-lg font-semibold mb-3 text-white">University Information</h3>
+                    <div className="text-slate-200 text-sm space-y-1">
+                      <p>A unit of Nitte (Deemed to be University)</p>
+                      <p>Nitte Education Trust</p>
+                      <p>6th Floor, University Enclave,</p>
+                      <p>Medical Sciences Complex,</p>
+                      <p>Deralakatte, Mangaluru - 575018</p>
+                      <p>Karnataka, India</p>
+                    </div>
+                  </div>
+
+                  {/* Map */}
+                  <div className="rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl">
+                    <div className="aspect-video w-full">
+                      <iframe
+                        title="NMAMIT Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.6730538655893!2d74.92911808195412!3d13.183002554024787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb56415ad85e5b%3A0x10b77ac6f6afc7fa!2sNitte%20Mahalinga%20Adyantaya%20Memorial%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1738765768735!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="grayscale-[0.3] contrast-[1.1]"
+                      />
                     </div>
                   </div>
                 </div>
-            </LiquidGlassCard>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -1,6 +1,21 @@
 import { useState, Suspense } from "react";
 import { motion } from "framer-motion"; // Removed unused useScroll, useTransform
-import LiquidGlassCard from "../components/liquidglass/LiquidGlassCard";
+
+
+const glassCardStyle = {
+  borderRadius: "1.75rem",
+  border: "1px solid rgba(255, 255, 255, 0.18)",
+  background: `
+      linear-gradient(to top, rgba(0, 0, 0, 0.20), transparent 60%),
+      rgba(21, 21, 21, 0.30)
+    `,
+  boxShadow: `
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.22)
+    `,
+  backdropFilter: "brightness(1.1) blur(1px)",
+  WebkitBackdropFilter: "brightness(1.1) blur(1px)",
+};
 import MerchBuyModal from "../components/merch/MerchBuyModal";
 import TShirt3DModel from "../components/merch/TShirt3DModel";
 import { Rotate3d } from "lucide-react";
@@ -65,7 +80,7 @@ const Merch = () => {
 
       {/* Container with responsive padding - Centered Vertically & Horizontally */}
       <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-[1350px] mx-auto min-h-screen flex flex-col justify-center items-center">
-        
+
         {/* UNIFIED CARD */}
         <motion.div
           className="relative z-10 w-full"
@@ -73,7 +88,7 @@ const Merch = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <LiquidGlassCard className="p-0 !rounded-2xl sm:!rounded-[2.5rem] overflow-hidden border border-white/10 relative w-full">
+          <div style={glassCardStyle} className="p-0 overflow-hidden relative w-full">
 
             {/* Responsive Grid - With Creative Separator */}
             <div className="grid grid-cols-1 xl:grid-cols-2 relative z-10 w-full">
@@ -213,7 +228,7 @@ const Merch = () => {
               </div>
 
             </div>
-          </LiquidGlassCard>
+          </div>
         </motion.div>
 
         <MerchBuyModal
