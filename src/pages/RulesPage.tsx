@@ -30,14 +30,6 @@ const RulesPage = () => {
         />
 
         <div className="fixed inset-0 -z-10" />
-
-        <div className="fixed inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-20 left-10 w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 blur-3xl"></div>
-          <div className="absolute top-40 right-20 w-72 h-72 md:w-[450px] md:h-[450px] rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 opacity-20 blur-3xl"></div>
-          <div className="absolute bottom-20 left-1/2 w-56 h-56 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 opacity-15 blur-3xl"></div>
-          <div className="absolute bottom-32 right-10 w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-cyan-400 to-teal-400 opacity-20 blur-3xl"></div>
-        </div>
-
         <div className="relative z-10">
           <div className="mx-auto flex max-w-7xl flex-col gap-8">
             <div style={glassCardStyle} className="p-6 md:p-10">
