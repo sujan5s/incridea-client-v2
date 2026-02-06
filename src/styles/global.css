@@ -3,8 +3,12 @@
 @source "./src/**/*.{ts,tsx,html}";
 
 @theme {
-  --font-sans: "mocoSans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Outfit is now the primary sans font used for all normal text/paragraphs */
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  /* mocoSans is defined as a specific theme variable for headings */
   --font-moco: "mocoSans", sans-serif;
+  
   --animate-parallax-fast: move-left 40s linear infinite;
   --animate-parallax-mid: move-left 60s linear infinite;
   --animate-parallax-slow: move-left 80s linear infinite;
@@ -19,18 +23,12 @@
   }
 }
 
+/* --- MOCO SANS FONT FACES --- */
 @font-face {
   font-family: 'mocoSans';
   src: url('../assets/mocoSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'mocoSans';
-  src: url('../assets/mocoSans-RegularItalic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
 }
 
 @font-face {
@@ -42,23 +40,38 @@
 
 @font-face {
   font-family: 'mocoSans';
-  src: url('../assets/mocoSans-BoldItalic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'mocoSans';
   src: url('../assets/mocoSans-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
 
+/* --- OUTFIT FONT FACES --- */
 @font-face {
-  font-family: 'mocoSans';
-  src: url('../assets/mocoSans-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
+  font-family: 'Outfit';
+  src: url('../assets/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/Outfit-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/Outfit-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../assets/Outfit-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @layer base {
@@ -67,7 +80,20 @@
   }
 
   body {
-    @apply min-h-screen bg-slate-950 text-slate-50 antialiased;
+    /* Set Outfit as the default for everything */
+    @apply min-h-screen bg-slate-950 text-slate-50 antialiased font-sans;
+  }
+
+  /* FORCE all paragraphs, list items, and general text to use Outfit 
+     unless they are explicitly marked with font-moco 
+  */
+  p, li, span, table, div:not(.font-moco) {
+    font-family: var(--font-sans);
+  }
+
+  /* Keep titles strictly on mocoSans with high priority */
+  h1, h2, h3, h4, h5, h6, .font-moco {
+    font-family: var(--font-moco) !important;
   }
 
   a {
@@ -119,6 +145,7 @@
   .toast-close {
     @apply rounded bg-white/5 px-2 py-1 text-[11px] font-semibold text-slate-200 transition hover:bg-white/15;
   }
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
