@@ -5,6 +5,9 @@
 @theme {
   /* Outfit is now the primary sans font used for all normal text/paragraphs */
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* To expose font-sans as a utility class */
+  --font-family-sans: var(--font-sans);
   
   /* mocoSans is defined as a specific theme variable for headings */
   --font-moco: "mocoSans", sans-serif;
