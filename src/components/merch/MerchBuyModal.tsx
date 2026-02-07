@@ -24,6 +24,21 @@ const MerchBuyModal = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false); // New state for success view
 
+  const glassCardStyle = {
+    borderRadius: "1.75rem",
+    border: "1px solid rgba(255, 255, 255, 0.18)",
+    background: `
+      linear-gradient(to top, rgba(0, 0, 0, 0.20), transparent 60%),
+      rgba(21, 21, 21, 0.30)
+    `,
+    boxShadow: `
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.22)
+    `,
+    backdropFilter: "brightness(1.1) blur(1px)",
+    WebkitBackdropFilter: "brightness(1.1) blur(1px)",
+  };
+
   const {
     register,
     handleSubmit,
@@ -79,7 +94,7 @@ const MerchBuyModal = ({
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <LiquidGlassCard className="relative p-4 sm:p-6 max-h-[95vh] overflow-y-auto w-full">
+            <LiquidGlassCard style={glassCardStyle} className="merch-glass relative p-4 sm:p-6 max-h-[95vh] overflow-y-auto w-full">
               {/* Close Button (only show if not success state) */}
               {!isSuccess && (
                 <button
